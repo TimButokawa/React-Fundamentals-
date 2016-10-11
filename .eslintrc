@@ -1,0 +1,13 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "browser": true,
+    },
+    "globals": {
+        "react": true
+    },
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "plugins": ["react"]
+}
