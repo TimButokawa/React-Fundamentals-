@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "production": "webpack -p",
-      "start": "webpack-dev-server"
+    "production": "webpack -p",
+    "start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "raven-js": "^3.7.0",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
