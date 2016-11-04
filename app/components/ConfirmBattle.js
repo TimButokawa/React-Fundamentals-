@@ -8,7 +8,7 @@ var Loading = require('../components/Loading');
 
 function ConfirmBattle(props) {
     return props.isLoading === true ?
-        <Loading speed={800} text='Waiting'/> :
+        <Loading speed={ 800 } text='Waiting'/> :
         <MainContainer>
             <h1>Confirm Players</h1>
             <div className='row'>
