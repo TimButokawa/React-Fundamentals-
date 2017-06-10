@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/app/index.html',
@@ -19,5 +20,18 @@ module.exports = {
             { test: /\.css$/, loader: 'style-loader!css-loader' }
         ]
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [
+        HtmlWebpackPluginConfig,
+        new webpack.DefinePlugin({
+            'process.env':{
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress:{
+                warnings: true
+            }
+        })
+    ]
+
 };
